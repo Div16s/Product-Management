@@ -16,7 +16,7 @@ const ProductListWithSpecificPrice = () => {
 
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/products/delete/${id}`, {
+            const response = await fetch(`https://product-management-cjcw.onrender.com/api/products/delete/${id}`, {
                 method: 'DELETE',
                 headers: {
                     Authorization: `Bearer ${user.token}`,
@@ -47,7 +47,7 @@ const ProductListWithSpecificPrice = () => {
                 toast("Error", "Please enter the price", "error")
                 return;
             }
-            const response = await fetch(`http://localhost:5000/api/products/specificPrice/${email}/${price}`, {
+            const response = await fetch(`https://product-management-cjcw.onrender.com/api/products/specificPrice/${email}/${price}`, {
                 method: 'GET',
                 headers: {
                     Authorization: `Bearer ${user.token}`,
