@@ -18,7 +18,7 @@ const ProductListWithSpecificRating = () => {
         if(loading) return;
         setLoading(true);
         try {
-            const response = await fetch(`http://localhost:5000/api/products/delete/${id}`, {
+            const response = await fetch(`https://product-management-cjcw.onrender.com/api/products/delete/${id}`, {
                 method: 'DELETE',
                 headers: {
                     Authorization: `Bearer ${user.token}`,
@@ -51,7 +51,7 @@ const ProductListWithSpecificRating = () => {
                 toast("Error", "Please enter the rating", "error")
                 return;
             }
-            const response = await fetch(`http://localhost:5000/api/products/specificRating/${email}/${rating}`, {
+            const response = await fetch(`https://product-management-cjcw.onrender.com/api/products/specificRating/${email}/${rating}`, {
                 method: 'GET',
                 headers: {
                     Authorization: `Bearer ${user.token}`,
