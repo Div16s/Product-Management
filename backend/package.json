@@ -4,7 +4,7 @@
   "description": "Product Management Backend",
   "main": "server.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "author": "Divyankar Shah",
   "license": "ISC",
