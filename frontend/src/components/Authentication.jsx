@@ -18,7 +18,7 @@ const Authentication = ({ type }) => {
         setLoading(true);
         try {
             const endpoint = type === 'login' ? 'login' : 'signup';
-            const response = await fetch(`http://localhost:5000/api/auth/${endpoint}`, {
+            const response = await fetch(`https://product-management-cjcw.onrender.com/api/auth/${endpoint}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
