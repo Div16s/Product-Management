@@ -16,7 +16,7 @@ const FeaturedProductList = () => {
         if (loading) return;
         setLoading(true);
         try {
-            const response = await fetch(`http://localhost:5000/api/products/delete/${id}`, {
+            const response = await fetch(`https://product-management-cjcw.onrender.com/api/products/delete/${id}`, {
                 method: 'DELETE',
                 headers: {
                     Authorization: `Bearer ${user.token}`,
@@ -46,7 +46,7 @@ const FeaturedProductList = () => {
             if (loading) return;
             setLoading(true);
             try {
-                const response = await fetch(`http://localhost:5000/api/products/featured/${user.email}`, {
+                const response = await fetch(`https://product-management-cjcw.onrender.com/api/products/featured/${user.email}`, {
                     method: 'GET',
                     headers: {
                         Authorization: `Bearer ${user.token}`,
